@@ -29,6 +29,12 @@ class BeveragesController < ApplicationController
     redirect_to beverages_path
   end
 
+  def destroy
+    @beverage = Beverage.find(params[:id]).delete
+
+    redirect_to beverages_path
+  end
+
   private
   def beverage_params
     params.require(:beverage).permit(:drink_name, :alcohol)

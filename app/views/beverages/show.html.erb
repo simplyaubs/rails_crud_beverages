@@ -4,4 +4,5 @@
   </li>
 </ul>
 
-<%= link_to 'Edit', edit_beverage_path(@beverage) %>
+<%= link_to 'Edit', edit_beverage_path(@beverage) %> |
+<%= link_to 'Delete beverage', beverage_path(@beverage), method: :delete %>

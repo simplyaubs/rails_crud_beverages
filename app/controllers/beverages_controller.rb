@@ -14,6 +14,21 @@ class BeveragesController < ApplicationController
     end
   end
 
+  def show
+    @beverage = Beverage.find(params[:id])
+  end
+
+  def edit
+    @beverage = Beverage.find(params[:id])
+  end
+
+  def update
+    @beverage = Beverage.find(params[:id])
+    @beverage.update_attributes!(beverage_params)
+
+    redirect_to beverages_path
+  end
+
   private
   def beverage_params
     params.require(:beverage).permit(:drink_name, :alcohol)

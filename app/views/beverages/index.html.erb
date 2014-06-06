@@ -15,7 +15,7 @@
 <% @beverages.each do |beverage| %>
 <ul>
   <li>
-    <%= beverage.drink_name %>, <%= beverage.alcohol %>
+    <%= link_to "#{beverage.drink_name}", beverage_path(beverage) %>, <%= beverage.alcohol %>
   </li>
 </ul>
 <% end %>

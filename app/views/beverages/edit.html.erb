@@ -1,0 +1,13 @@
+<%= form_for @beverage do |f| %>
+<p>
+  <%= f.label :drink_name %>
+  <%= f.text_field :drink_name %>
+</p>
+  <p>
+    <%= f.label :alcohol %>
+    <%= f.text_field :alcohol %>
+  </p>
+  <p>
+    <%= f.submit 'Update drink' %>
+  </p>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_for @beverage do |f| %>
+<p>
+  <%= f.label :drink_name %>
+  <%= f.text_field :drink_name %>
+</p>
+  <p>
+    <%= f.label :alcohol %>
+    <%= f.text_field :alcohol %>
+  </p>
+  <p>
+    <%= f.submit 'Add beverage' %>
+  </p>
+<% end %>
+
+<% @beverages.each do |beverage| %>
+<ul>
+  <li>
+    <%= beverage.drink_name %>, <%= beverage.alcohol %>
+  </li>
+</ul>
+<% end %>
